@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1c1f23">
+<title>跑路吧兄弟4 · 素材索引</title>
+<style>
+:root{--bg:#f4f5f7;--card:#fff;--line:#e2e5e9;--txt:#1c1f23;--dim:#6b7280;--u:#c2410c;--tl:#dc2626;--fx:#7c3aed;--soft:#eceff3;--blue:#0369a1}
+*{box-sizing:border-box;-webkit-text-size-adjust:100%}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font:15px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;overflow-x:hidden}
+.wrap{max-width:1440px;margin:0 auto;padding:18px 14px 70px}
+h1{font-size:clamp(19px,5vw,24px);margin:0 0 4px;line-height:1.3}
+h2{font-size:clamp(15px,4vw,17px);margin:26px 0 10px;padding-bottom:7px;border-bottom:2px solid var(--line)}
+h2 .n{display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;background:#1c1f23;color:#fff;border-radius:6px;font-size:13px;margin-right:7px;vertical-align:2px}
+h3{font-size:clamp(14px,3.6vw,15px);margin:18px 0 6px}
+.sub{color:var(--dim);margin:0 0 12px;font-size:12.5px;line-height:1.6}
+/* tabs */
+.tabs{display:flex;gap:6px;overflow-x:auto;margin:14px -14px 0;padding:0 14px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font-size:13px;padding:9px 14px;border:1px solid var(--line);border-bottom:none;background:var(--soft);border-radius:9px 9px 0 0;cursor:pointer;color:var(--dim);white-space:nowrap;min-height:40px;display:flex;align-items:center}
+.tab.on{background:var(--card);color:var(--txt);font-weight:700}
+.pane{display:none}.pane.on{display:block}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:9px;margin:14px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.card b{display:block;font-size:clamp(17px,4.6vw,20px);line-height:1.25}
+.card span{color:var(--dim);font-size:11.5px}
+.notes{background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:12px 15px;margin:13px 0;font-size:13.5px}
+.notes b{color:#b45309}
+.notes ul{margin:6px 0 0;padding-left:18px}.notes li{margin:5px 0}
+.legend{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 15px;margin:13px 0;font-size:13px}
+code{background:var(--soft);padding:1px 5px;border-radius:4px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;word-break:break-all}
+/* timeline */
+.tl{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tlx{min-width:660px}
+.tlrow{display:flex;align-items:center;gap:8px;margin:4px 0}
+.tlname{width:104px;flex:none;font-size:12.5px;text-align:right;color:var(--dim)}
+.tlname.u{color:var(--u);font-weight:700}
+.tlbar{position:relative;flex:1;height:20px;background:var(--soft);border-radius:4px}
+.seg{position:absolute;top:0;height:100%;background:#0ea5e9;border-radius:2px;opacity:.85}
+.seg.tl{background:repeating-linear-gradient(45deg,var(--tl),var(--tl) 4px,#fca5a5 4px,#fca5a5 8px)}
+.seg.fx{background:var(--fx);opacity:.6}
+.seg.u{background:#f59e0b}
+.ticks{position:relative;height:16px;margin-left:112px}
+.tick{position:absolute;font-size:11px;color:var(--dim);transform:translateX(-50%)}
+/* buttons */
+.filters{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0;align-items:center}
+button{font:inherit;font-size:12.5px;padding:8px 12px;border:1px solid var(--line);background:var(--card);border-radius:16px;cursor:pointer;min-height:38px}
+button.on{background:#1c1f23;color:#fff;border-color:#1c1f23}
+input[type=search]{font:inherit;font-size:15px;padding:10px 13px;border:1px solid var(--line);border-radius:9px;width:100%;background:var(--card);min-height:44px}
+/* tables */
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:10px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:12.8px}
+th,td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--soft);font-weight:600;font-size:12.3px;white-space:nowrap}
+tbody tr:hover{background:#f0f9ff}
+.mt th,.mt td{white-space:nowrap}
+.id{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:700;white-space:nowrap}
+.u{color:var(--u);font-weight:700}
+.p{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;color:var(--dim);word-break:break-all;-webkit-user-select:all;user-select:all}
+.tag{display:inline-block;padding:0 5px;border-radius:4px;font-size:11px;background:var(--soft);color:var(--dim);white-space:nowrap}
+.tag.tl{background:#fee2e2;color:var(--tl);font-weight:600}
+.tag.u{background:#ffedd5;color:var(--u);font-weight:600}
+/* mobile: 素材清单变成卡片 */
+.mcard{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin:8px 0}
+.mcard .r1{display:flex;justify-content:space-between;gap:8px;align-items:baseline;flex-wrap:wrap}
+.mcard .nm{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;color:var(--dim);word-break:break-all;margin-top:5px;-webkit-user-select:all;user-select:all}
+.mcard .kv{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:12.5px;margin-top:6px}
+.mcard .kv span:nth-child(odd){color:var(--dim)}
+/* events */
+.ev{background:var(--card);border:1px solid var(--line);border-radius:9px;margin:7px 0;overflow:hidden}
+.evh{padding:10px 13px;cursor:pointer;display:flex;gap:9px;align-items:baseline;flex-wrap:wrap;min-height:44px}
+.evh .t{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:700;color:var(--blue);width:52px;flex:none}
+.evh .a{font-family:ui-monospace,Menlo,Consolas,monospace;color:var(--dim);width:60px;flex:none;font-size:11.5px}
+.evh .c{flex:1;min-width:180px;font-size:13.5px}
+.evh .cnt{font-size:11.5px;color:var(--dim)}
+.evb{display:none;padding:0 13px 11px;border-top:1px solid var(--line)}
+.ev.open .evb{display:block}
+.hint{color:var(--dim);font-size:12.5px;margin:7px 0}
+.doc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.doc ul{padding-left:20px}.doc li{margin:4px 0}
+.warn{background:#fffbeb;border-left:3px solid var(--tl);padding:8px 12px;margin:9px 0;border-radius:0 6px 6px 0}
+.ok{background:#f0fdf4;border-left:3px solid #16a34a;padding:8px 12px;margin:9px 0;border-radius:0 6px 6px 0}
+.footnote{border-top:1px solid var(--line);margin-top:40px;padding-top:12px;color:var(--dim);font-size:12px}
+@media (max-width:700px){
+ .wrap{padding:14px 12px 60px}
+ .tabs{margin:12px -12px 0;padding:0 12px}
+ .doc{padding:12px 13px}
+ th,td{padding:6px 8px}
+}
+@media print{.tabs,.filters,input{display:none}.pane{display:block!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>《跑路吧兄弟4 · 超级英雄》素材索引</h1>
+<p class="sub">拍摄日 2026-10-05 · 场地德琳 · 素材盘 <code>JX-Backup</code> · 单文件离线可用 · 版次 2026-10-10</p>
+
+<div class="tabs">
+<div class="tab on" data-p="p0">① 总览 / 时间轴</div>
+<div class="tab" data-p="p1">② 素材清单</div>
+<div class="tab" data-p="p2">③ 事件定位</div>
+<div class="tab" data-p="p3">④ 剧情走向</div>
+<div class="tab" data-p="p4">⑤ 场记核对</div>
+</div>
+
+<!-- ① -->
+<div class="pane on" id="p0">
+<div class="cards" id="cards"></div>
+<div class="legend">
+<b>编号规则</b>（对讲用编号比喊文件名快）<br>
+<code>A</code> 空镜 · <code>B</code> 片头 · <code>C</code> 小游戏1（大摆锤） · <code>T</code> 过渡 · <code>D</code> 撕名牌 · <code>W</code> 卧底揭晓 · <code>Z</code> 片尾<br>
+例：<code>D-023</code> = 撕名牌第 23 个文件 = 钢铁侠跟拍（卧底）
+</div>
+<div class="notes"><b>开工前必读</b>
+<ul>
+<li><b>撕名牌时间锚点 = 19:14:45</b>。实拍时刻 = 19:14:45 + 游戏内时间。（已用「17:40 绿巨人掉一条命 ↔ 糍粑机位 19:32:13 说"面面死了"」交叉验证）</li>
+<li><b>开场 19:02–19:05 有一段赛前剧情</b>（发复活卡 ＋ 灭霸宣布卧底规则），场记没记 —— 见 ⑤。</li>
+<li><b>神奇女侠（串串香）是延时摄影</b>：输出 246.7 秒＝实拍 51.8 分钟，压缩 12.59×（2.38fps）。<b>不能当主画面</b>，需 AI 补帧；事件表里她的定位给的是<b>帧号</b>。</li>
+<li><b>海王（吃不起火鸡面）只有 0.8 分钟</b>（淘汰早，正常），他本人的事件在其跟拍线上没有素材。</li>
+<li><b>固定机位是碎片化的</b>：24 个事件里 17 个没有固定机位覆盖。</li>
+<li><b>卧底三人 = 钢铁侠（破车北伐）· 超人（乔治）· 绿巨人（火鸡面面）</b>（标 ★）。揭晓素材 <code>W-001</code>/<code>W-002</code>。</li>
+</ul></div>
+<h2><span class="n">1</span>机位覆盖时间轴（撕名牌段 19:00–20:15）</h2>
+<p class="hint">黄条＝卧底线，斜纹＝延时摄影，紫条＝固定机位。手机上可左右滑动。</p>
+<div class="tl"><div class="tlx" id="tl"></div><div class="tlx ticks" id="ticks"></div></div>
+<h2><span class="n">2</span>全片段落</h2>
+<div class="tscroll"><table><thead><tr><th>段落</th><th>素材</th><th>实拍时间</th><th>要点</th></tr></thead><tbody>
+<tr><td>片头</td><td class="id">B-001 / B-002 / B-003</td><td>—</td><td>灭霸念广播，交代世界观与挑战</td></tr>
+<tr><td>空镜 / 场景</td><td class="id">A-001 ~ A-010</td><td>—</td><td>德琳空镜航拍（含 2024/2025 旧素材）</td></tr>
+<tr><td>第一关 · 躲避大摆锤</td><td class="id">C-001 ~ C-020</td><td>16:19–16:36</td><td>主持人讲规则 → 三二一开始；<b>DC 组胜 28:25</b></td></tr>
+<tr><td>过渡</td><td class="id">T-001 / T-002</td><td>—</td><td>小游戏1 → 撕名牌 衔接</td></tr>
+<tr><td>撕名牌</td><td class="id">D-001 ~ D-082</td><td>19:14:45–20:03+</td><td>10 条跟拍 ＋ 固定机位；见 ③</td></tr>
+<tr><td>卧底揭晓</td><td class="id">W-001 / W-002</td><td>—</td><td>灭霸当众点出三位卧底</td></tr>
+<tr><td>片尾</td><td class="id">Z-001</td><td>—</td><td>收尾口号「跑路吧兄弟」</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- ② -->
+<div class="pane" id="p1">
+<div class="filters"><input type="search" id="q" placeholder="搜索：编号 / 角色 / 文件名…"></div>
+<div class="filters"><span id="catbtns" style="display:flex;gap:6px;flex-wrap:wrap"></span></div>
+<div class="filters"><span id="rolebtns" style="display:flex;gap:6px;flex-wrap:wrap"></span></div>
+<p class="hint" id="cnt"></p>
+<div class="tscroll" id="tblwrap"><table class="mt"><thead><tr>
+<th>编号</th><th>分类</th><th>角色 / 机位</th><th>文件名</th><th>起始</th><th>结束</th><th>覆盖</th><th>片长</th><th>GB</th><th>备注</th><th>相对路径</th>
+</tr></thead><tbody id="tb"></tbody></table></div>
+<div id="mcards"></div>
+</div>
+
+<!-- ③ -->
+<div class="pane" id="p2">
+<p class="hint">点开任一事件，看它<b>命中哪些素材、在文件的第几分几秒</b>（延时的给帧号）。</p>
+<div id="evs"></div>
+</div>
+
+<!-- ④ -->
+<div class="pane" id="p3"><div class="doc">
+<h2 style="margin-top:4px">剧情走向</h2>
+<p><b>一句话</b>：灭霸用 0.01 美刀包下整座学校、抢走一整箱冰红茶，10 位英雄闯关夺回。撕名牌环节里<b>有 3 位英雄是卧底</b>，最终<b>卧底阵营获胜</b>。</p>
+
+<h3>赛前剧情（19:02–19:05｜D-013 / D-014 / D-015）—— ⚠️ 场记漏记</h3>
+<div class="warn">这段是全片逻辑的地基，必须剪进去，否则观众不知道场上有卧底，32:40 的反转不成立。</div>
+<ul>
+<li><b>发复活卡</b>：获胜阵营喊口号并「获得一张复活卡」</li>
+<li><b>灭霸宣布卧底规则</b>：「仅仅打败我是没有用的，我还在你们中间安插了多名卧底……你们必须照出所有卧底，并淘汰掉他们。但我相信我的卧底，肯定会淘汰所有好人。」</li>
+<li><b>启动口令</b>：「那么好，现在撕名牌正式开始！三、二、一——」</li>
+</ul>
+
+<h3>第一关 · 躲避大摆锤（16:19–16:36）</h3>
+<p>主持人讲规则（「围绕在这个圈边……三、二、一，游戏开始」）→ 过程（「快点！松手！你被砸到了」「我铁到了」）→ 时间到。<b>DC 组胜，28:25</b>。</p>
+
+<h3>撕名牌（约 49 分钟）</h3>
+<div class="tscroll"><table><thead><tr><th>游戏内</th><th>事件</th></tr></thead><tbody>
+<tr><td class="id">0:00</td><td>开局，5 分钟只找卡不撕</td></tr>
+<tr><td class="id">1:00</td><td>黑寡妇主动发动技能：「获知一张复活牌的位置」</td></tr>
+<tr><td class="id">2:00</td><td>海王获得「傻子牌」</td></tr>
+<tr><td class="id">6:20</td><td>海王发动技能（滋水枪）</td></tr>
+<tr><td class="id">7:50</td><td>闪电侠名牌变大</td></tr>
+<tr><td class="id">~11:53</td><td>奇异博士入场 <span class="tag">场记记 10:10</span></td></tr>
+<tr><td class="id">13:00</td><td>神奇女侠用呼啦圈淘汰海王 → <b>海王 OUT</b></td></tr>
+<tr><td class="id">~17:22</td><td><b>灭霸念广播缩圈</b>：「游戏进行到十五分钟，场地缩小」<span class="tag">场记记 20:00</span></td></tr>
+<tr><td class="id">17:40</td><td>美国队长撕掉绿巨人<b>一条命</b></td></tr>
+<tr><td class="id">25:30</td><td>蜘蛛侠用「死亡笔记」失误 → 自身死亡 → 复活卡</td></tr>
+<tr><td class="id">28:00</td><td>闪电侠「时间减速」，全场禁跑 → 29:00 失效</td></tr>
+<tr><td class="id">30:20</td><td>闪电侠淘汰美国队长 → 30:50 美队复活卡复活</td></tr>
+<tr><td class="id">30:40</td><td>蝙蝠侠对闪电侠使用技能</td></tr>
+<tr><td class="id">31:10</td><td>闪电侠 OUT → 31:30 复活</td></tr>
+<tr><td class="id">32:20</td><td>超人（★卧底）发动技能（无敌）</td></tr>
+<tr><td class="id">32:40</td><td><b>钢铁侠（★卧底）使用技能淘汰惊奇队长</b> ← 全片最大反转</td></tr>
+<tr><td class="id">33:10</td><td>美国队长 OUT</td></tr>
+<tr><td class="id">44:50</td><td>神奇女侠淘汰黑寡妇</td></tr>
+<tr><td class="id">45:50</td><td>黑寡妇用复活卡复活</td></tr>
+<tr><td class="id">~48:06</td><td>闪电侠淘汰超人（★卧底出局）</td></tr>
+<tr><td class="id">49:00</td><td>黑寡妇 OUT</td></tr>
+<tr><td class="id">~50:18</td><td>⚠️ <b>闪电侠后段也出局</b>（场记漏记）</td></tr>
+</tbody></table></div>
+
+<h3>结局 · 卧底揭晓（W-001）</h3>
+<p>灭霸宣布「最终这一箱冰红茶，还是被我的卧底们拿下」，并当场点出<b>三位得力干将</b>——把英雄们「全部淘汰掉了」。</p>
+<p><b>三位卧底 = 钢铁侠（破车北伐）· 超人（乔治）· 绿巨人（火鸡面面）</b></p>
+
+<h3>卧底线怎么剪</h3>
+<div class="tscroll"><table><thead><tr><th>卧底</th><th>素材</th><th>关键节点</th></tr></thead><tbody>
+<tr><td class="u">钢铁侠 · 破车北伐</td><td class="id">D-023</td><td>20 分前后反复自证「我没有动手」→ <b>32:40 淘汰惊奇队长</b> → 活到最后</td></tr>
+<tr><td class="u">超人 · 乔治</td><td class="id">D-020（＋D-066/070/076/077）</td><td>找卡期到处套情报「虽然咱们不是队友，我们也可以当队友」→ 32:20 开无敌 → <b>~48:06 出局</b></td></tr>
+<tr><td class="u">绿巨人 · 火鸡面面</td><td class="id">D-021</td><td><b>17:40 被美队撕掉一条命</b> → 两条命机制</td></tr>
+</tbody></table></div>
+<div class="ok"><b>建议结构</b>：① 前 2/3 按「纯英雄」剪，三人的画面不动手脚；② 32:40 当分水岭，只当成一次普通淘汰；③ 揭晓后立刻插「回头看」蒙太奇。</div>
+</div></div>
+
+<!-- ⑤ -->
+<div class="pane" id="p4"><div class="doc">
+<h2 style="margin-top:4px">场记核对报告</h2>
+<p class="hint">方法：把全部 111 个音频文件转成文字（4124 段可用），按实拍时钟排序，逐条比对场记的 24 个事件。</p>
+
+<h3>要改的地方（按重要性）</h3>
+<div class="tscroll"><table><thead><tr><th>#</th><th>问题</th><th>改成</th></tr></thead><tbody>
+<tr><td>1</td><td>🔴 漏记整段赛前剧情（19:02–19:05）</td><td>补上「发复活卡 ＋ 卧底规则 ＋ 启动口令」</td></tr>
+<tr><td>2</td><td>奇异博士入场记 10:10</td><td>约 <b>11:53</b>（靳叫瘦 19:26:38「七博士来了」）</td></tr>
+<tr><td>3</td><td>缩圈记 20:00</td><td><b>广播 15 分左右就响</b>（17:22 录到，19:38 又一次）</td></tr>
+<tr><td>4</td><td>死亡笔记记 25:30</td><td>约 <b>26:50</b></td></tr>
+<tr><td>5</td><td>闪电侠淘汰超人记 47:00</td><td>约 <b>48:06</b></td></tr>
+<tr><td>6</td><td>🔴 漏记：闪电侠（学弟）后段也出局</td><td>补记，约 <b>50:18</b>（「我死了 死了」）</td></tr>
+<tr><td>7</td><td>🔴 漏记：还有别人出局</td><td>糍粑机位 20:06:55「他死了」</td></tr>
+</tbody></table></div>
+
+<h3>可复核的强证据</h3>
+<div class="tscroll"><table><thead><tr><th>场记</th><th>素材佐证</th><th>结论</th></tr></thead><tbody>
+<tr><td>1:00 黑寡妇使用技能</td><td>19:15:29「我要能知道一张复活牌的位置」</td><td>✅ 确认（实际 0:44）</td></tr>
+<tr><td>17:40 美队撕绿巨人一条命</td><td>19:32:13 糍粑「面面死了是吗」</td><td>✅ 强吻合</td></tr>
+<tr><td>32:40 钢铁侠淘汰惊奇队长</td><td>19:47:27 固定机位「我已经死了」</td><td>✅ 强吻合</td></tr>
+</tbody></table></div>
+
+<h3>⚠️ 11 项音频证不了</h3>
+<p>「时间减速」「有钱任性」「无敌」「贾维斯」——<b>这些技能台词在转写里一个都没有</b>。可能是现场没喊，也可能是麦没收到。要看画面才能定。另外神奇女侠（延时，音频被压 12.6 倍）与海王（仅 47 秒）没有有效音频。</p>
+
+<h3>可直接用的台词素材</h3>
+<div class="tscroll"><table><thead><tr><th>定位</th><th>内容</th></tr></thead><tbody>
+<tr><td class="id">D-014 · 19:04</td><td>灭霸：「我还在你们中间安插了多名卧底」</td></tr>
+<tr><td class="id">D-014 · 19:04:31</td><td>「你们必须照出所有卧底，并淘汰掉他们」</td></tr>
+<tr><td class="id">D-016 · 19:15:29</td><td>黑寡妇：「我要能知道一张复活牌的位置」</td></tr>
+<tr><td class="id">D-030 · 19:32:13</td><td>糍粑：「面面死了是吗」</td></tr>
+<tr><td class="id">D-054 · 19:47:27</td><td>「我已经死了」（惊奇队长出局瞬间）</td></tr>
+<tr><td class="id">D-051 · 19:47:55</td><td>靳叫瘦：「你到底有几张复活卡啊」</td></tr>
+<tr><td class="id">D-070 · 19:59:45</td><td>乔治自述：「我撕了三次……完全就是白撕了」</td></tr>
+<tr><td class="id">W-001</td><td>灭霸揭晓三位卧底</td></tr>
+</tbody></table></div>
+
+<h3>转写可信度</h3>
+<p>whisper.cpp + small 模型，中文，约 12× 实时。前 33 分钟对话清晰，后 16 分钟稀疏。<b>幻觉警告</b>：无人说话时会循环同一句，不能当台词用 —— 超人 <code>D-020</code> 66% ／ 绿巨人 <code>D-021</code> 56% ／ 闪电侠 <code>D-018</code> 36% ／ 钢铁侠 <code>D-023</code> 22%。</p>
+</div></div>
+
+<p class="footnote">单文件索引 · 全部数据内嵌 · 断网可用 · 生成于 2026-10-10</p>
+</div>
+<script>
+const ROLE={"1-未知艺术家":"美国队长","2-火鸡面":"绿巨人","3-破车北伐":"钢铁侠","4-靳叫瘦":"黑寡妇","5-糍粑":"蝙蝠侠","6-乔治":"超人","7-吃不起火鸡面":"海王","8-学弟":"闪电侠","9-串串香":"神奇女侠","10-陈":"蜘蛛侠"};
+const RAW=[
+["A-001","A 空镜/场景","空镜","","校园 (5).MP4","","",77.1,0,"3840x2160",0.89,"","德琳空镜航拍/校园 (5).MP4"],
+["A-002","A 空镜/场景","空镜","","dji_fly_20250420_165456_0_1745139296933_video_low_quality.mp4","","",16.7,0,"1280x720",0.01,"","德琳空镜航拍/dji_fly_20250420_165456_0_1745139296933_video_low_quality.mp4"],
+["A-003","A 空镜/场景","空镜","","DJI_20241212141630_0554_D.MP4","14:16:30","14:16:50",18.8,20,"3840x2160",0.22,"","德琳空镜航拍/DJI_20241212141630_0554_D.MP4"],
+["A-004","A 空镜/场景","空镜","","DJI_20241212141936_0557_D.MP4","14:19:36","14:20:00",22.6,24,"3840x2160",0.26,"","德琳空镜航拍/DJI_20241212141936_0557_D.MP4"],
+["A-005","A 空镜/场景","空镜","","DJI_20241212143056_0576_D.MP4","14:30:56","14:31:06",7.6,10,"3840x2160",0.09,"","德琳空镜航拍/DJI_20241212143056_0576_D.MP4"],
+["A-006","A 空镜/场景","空镜","","DJI_20250616084808_0003_D.MP4","08:48:08","08:48:42",31.9,34,"3840x2160",0.37,"","德琳空镜航拍/DJI_20250616084808_0003_D.MP4"],
+["A-007","A 空镜/场景","空镜","","DJI_20261005162103_0286_D.MP4","16:21:03","16:21:36",32.3,33,"3840x2160",0.38,"","德琳空镜航拍/DJI_20261005162103_0286_D.MP4"],
+["A-008","A 空镜/场景","空镜","","DJI_20261005162139_0287_D.MP4","16:21:39","16:21:57",18.6,18.6,"3840x2160",0.22,"","德琳空镜航拍/DJI_20261005162139_0287_D.MP4"],
+["A-009","A 空镜/场景","空镜","","DJI_20261005163751_0292_D.MP4","16:37:51","16:38:10",18.5,19,"3840x2160",0.22,"","德琳空镜航拍/DJI_20261005163751_0292_D.MP4"],
+["A-010","A 空镜/场景","空镜","","DJI_20261005163821_0293_D.MP4","16:38:21","16:38:29",7.9,8,"3840x2160",0.09,"","德琳空镜航拍/DJI_20261005163821_0293_D.MP4"],
+["B-001","B 片头","片头","","片头2.mp4","","",29.4,0,"3840x2160",0.22,"","开头/片头2.mp4"],
+["B-002","B 片头","片头","","片头1.mp4","","",25,0,"1920x1080",0.05,"","开头/片头1.mp4"],
+["B-003","B 片头","片头","","片头2小插曲.mp4","","",3.6,0,"1920x1080",0.01,"","开头/片头2小插曲.mp4"],
+["C-001","C 小游戏1·大摆锤","副机位","","微信视频2026-10-07_070403_910.mp4","","",48.9,0,"1920x1080",0.11,"","小游戏1/微信视频2026-10-07_070403_910.mp4"],
+["C-002","C 小游戏1·大摆锤","副机位","","DJI_20261005161901_0121_D.MP4","16:19:01","16:19:41",39.5,40,"1920x1080",0.25,"","小游戏1/副机位/机位2/DJI_20261005161901_0121_D.MP4"],
+["C-003","C 小游戏1·大摆锤","大摆锤航拍","","DJI_20261005162010_0285_D.MP4","16:20:10","16:20:44",33.4,34,"3840x2160",0.39,"航拍=混战俯拍全局","小游戏1/大摆锤航拍/DJI_20261005162010_0285_D.MP4"],
+["C-004","C 小游戏1·大摆锤","副机位","","DJI_20261005162309_0477_D.MP4","16:23:09","16:24:20",69.3,71,"1920x1080",0.28,"","小游戏1/副机位/机位1/DJI_20261005162309_0477_D.MP4"],
+["C-005","C 小游戏1·大摆锤","大摆锤航拍","","DJI_20261005162515_0288_D.MP4","16:25:15","16:25:37",22.6,22.6,"3840x2160",0.26,"","小游戏1/大摆锤航拍/DJI_20261005162515_0288_D.MP4"],
+["C-006","C 小游戏1·大摆锤","副机位","","DJI_20261005162548_0478_D.MP4","16:25:48","16:25:52",2.1,4,"1920x1080",0.01,"","小游戏1/副机位/机位1/DJI_20261005162548_0478_D.MP4"],
+["C-007","C 小游戏1·大摆锤","大摆锤航拍","","DJI_20261005162556_0289_D.MP4","16:25:56","16:26:18",21.9,22,"3840x2160",0.25,"","小游戏1/大摆锤航拍/DJI_20261005162556_0289_D.MP4"],
+["C-008","C 小游戏1·大摆锤","副机位","","DJI_20261005162608_0479_D.MP4","16:26:08","16:27:26",75.5,78,"1920x1080",0.31,"","小游戏1/副机位/机位1/DJI_20261005162608_0479_D.MP4"],
+["C-009","C 小游戏1·大摆锤","副机位","","DJI_20261005162612_0033_D.MP4","16:26:12","16:26:59",43.7,47,"1920x1080",0.18,"","小游戏1/副机位/机位4/DJI_20261005162612_0033_D.MP4"],
+["C-010","C 小游戏1·大摆锤","副机位","","DJI_20261005162654_0124_D.MP4","16:26:54","16:27:41",45.9,47,"1920x1080",0.29,"","小游戏1/副机位/机位2/DJI_20261005162654_0124_D.MP4"],
+["C-011","C 小游戏1·大摆锤","大摆锤航拍","","DJI_20261005162834_0290_D.MP4","16:28:34","16:28:53",18.8,19,"3840x2160",0.22,"","小游戏1/大摆锤航拍/DJI_20261005162834_0290_D.MP4"],
+["C-012","C 小游戏1·大摆锤","副机位","","DJI_20261005163029_0035_D.MP4","16:30:29","16:31:17",44.9,48,"1920x1080",0.18,"","小游戏1/副机位/机位4/DJI_20261005163029_0035_D.MP4"],
+["C-013","C 小游戏1·大摆锤","副机位","","DJI_20261005163031_0480_D.MP4","16:30:31","16:31:19",45.4,48,"1920x1080",0.19,"","小游戏1/副机位/机位1/DJI_20261005163031_0480_D.MP4"],
+["C-014","C 小游戏1·大摆锤","副机位","","CAM_20261005163102_0006_D.MP4","16:31:02","16:31:52",47.8,50,"3840x2160",0.34,"","小游戏1/副机位/机位3/CAM_20261005163102_0006_D.MP4"],
+["C-015","C 小游戏1·大摆锤","副机位","","DJI_20261005163116_0125_D.MP4","16:31:16","16:31:58",41.1,42,"1920x1080",0.26,"","小游戏1/副机位/机位2/DJI_20261005163116_0125_D.MP4"],
+["C-016","C 小游戏1·大摆锤","大摆锤航拍","","DJI_20261005163217_0291_D.MP4","16:32:17","16:33:22",64.1,65,"3840x2160",0.74,"","小游戏1/大摆锤航拍/DJI_20261005163217_0291_D.MP4"],
+["C-017","C 小游戏1·大摆锤","副机位","","DJI_20261005163433_0036_D.MP4","16:34:33","16:35:21",44.3,48,"1920x1080",0.18,"","小游戏1/副机位/机位4/DJI_20261005163433_0036_D.MP4"],
+["C-018","C 小游戏1·大摆锤","副机位","","DJI_20261005163434_0481_D.MP4","16:34:34","16:35:24",47.4,50,"1920x1080",0.19,"","小游戏1/副机位/机位1/DJI_20261005163434_0481_D.MP4"],
+["C-019","C 小游戏1·大摆锤","副机位","","CAM_20261005163456_0007_D.MP4","16:34:56","16:35:54",55.4,58,"3840x2160",0.4,"含完整规则+起止","小游戏1/副机位/机位3/CAM_20261005163456_0007_D.MP4"],
+["C-020","C 小游戏1·大摆锤","副机位","","DJI_20261005163518_0127_D.MP4","16:35:18","16:36:06",47.1,48,"1920x1080",0.3,"","小游戏1/副机位/机位2/DJI_20261005163518_0127_D.MP4"],
+["T-001","T 过渡","小游戏1→撕名牌过渡","","compose_video_1791205317046.mp4","","",76.8,0,"1920x1080",0.26,"","小游戏1/小游戏1到撕名牌过渡/compose_video_1791205317046.mp4"],
+["T-002","T 过渡","小游戏1→撕名牌过渡","","compose_video_1791205593454.mp4","","",15,0,"1920x1080",0.05,"","小游戏1/小游戏1到撕名牌过渡/compose_video_1791205593454.mp4"],
+["D-001","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005155840_0115_D.MP4","15:58:40","15:58:44",3.4,4,"1920x1080",0.02,"","撕名牌/固定机位+大镜头/1/DJI_20261005155840_0115_D.MP4"],
+["D-002","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005160220_0116_D.MP4","16:02:20","16:02:50",28.7,30,"1920x1080",0.18,"","撕名牌/固定机位+大镜头/1/DJI_20261005160220_0116_D.MP4"],
+["D-003","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005160604_0117_D.MP4","16:06:04","16:06:11",6.5,7,"1920x1080",0.04,"","撕名牌/固定机位+大镜头/1/DJI_20261005160604_0117_D.MP4"],
+["D-004","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005160614_0118_D.MP4","16:06:14","16:06:18",3.7,4,"1920x1080",0.02,"","撕名牌/固定机位+大镜头/1/DJI_20261005160614_0118_D.MP4"],
+["D-005","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005160622_0119_D.MP4","16:06:22","16:06:26",2.9,4,"1920x1080",0.02,"","撕名牌/固定机位+大镜头/1/DJI_20261005160622_0119_D.MP4"],
+["D-006","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005160630_0120_D.MP4","16:06:30","16:06:56",24.1,26,"1920x1080",0.15,"","撕名牌/固定机位+大镜头/1/DJI_20261005160630_0120_D.MP4"],
+["D-007","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005161901_0121_D.MP4","16:19:01","16:19:41",39.5,40,"1920x1080",0.25,"","撕名牌/固定机位+大镜头/1/DJI_20261005161901_0121_D.MP4"],
+["D-008","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005162654_0124_D.MP4","16:26:54","16:27:41",45.9,47,"1920x1080",0.29,"","撕名牌/固定机位+大镜头/1/DJI_20261005162654_0124_D.MP4"],
+["D-009","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005163116_0125_D.MP4","16:31:16","16:31:58",41.1,42,"1920x1080",0.26,"","撕名牌/固定机位+大镜头/1/DJI_20261005163116_0125_D.MP4"],
+["D-010","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005163357_0126_D.MP4","16:33:57","16:33:59",0.1,2,"1920x1080",0,"⚠️延时","撕名牌/固定机位+大镜头/1/DJI_20261005163357_0126_D.MP4"],
+["D-011","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005163518_0127_D.MP4","16:35:18","16:36:06",47.1,48,"1920x1080",0.3,"","撕名牌/固定机位+大镜头/1/DJI_20261005163518_0127_D.MP4"],
+["D-012","D 撕名牌·跟拍","10-陈","","DJI_20261005190119_0482_D.MP4","19:01:19","19:01:52",30.8,33,"1920x1080",0.13,"","撕名牌/10-陈/DJI_20261005190119_0482_D.MP4"],
+["D-013","D 撕名牌·跟拍","10-陈","","DJI_20261005190221_0483_D.MP4","19:02:21","19:02:58",34.6,37,"1920x1080",0.14,"★赛前：发复活卡","撕名牌/10-陈/DJI_20261005190221_0483_D.MP4"],
+["D-014","D 撕名牌·跟拍","1-未知艺术家","","DJI_20261005190333_0222_D.MP4","19:03:33","19:04:52",75.7,79,"1920x1080",0.31,"★赛前：灭霸宣布卧底规则","撕名牌/1-未知艺术家/DJI_20261005190333_0222_D.MP4"],
+["D-015","D 撕名牌·跟拍","10-陈","","DJI_20261005190336_0484_D.MP4","19:03:36","19:04:57",79,81,"1920x1080",0.32,"★赛前：卧底规则另角度","撕名牌/10-陈/DJI_20261005190336_0484_D.MP4"],
+["D-016","D 撕名牌·跟拍","4-靳叫瘦","","CAM_20261005191445_0034_D.MP4","19:14:45","19:44:50",1802.1,1805,"3840x2160",10.16,"4K","撕名牌/4-靳叫瘦/CAM_20261005191445_0034_D.MP4"],
+["D-017","D 撕名牌·跟拍","9-串串香","","DJI_20261005191446_0139_D.MP4","19:14:46","20:06:32",246.7,3106,"1920x1080",2.07,"⚠️延时12.59×，需AI补帧","撕名牌/9-串串香/DJI_20261005191446_0139_D.MP4"],
+["D-018","D 撕名牌·跟拍","8-学弟","","DJI_20261005191448_0247_D.MP4","19:14:48","20:06:42",3112.1,3114,"1920x1080",12.6,"","撕名牌/8-学弟/DJI_20261005191448_0247_D.MP4"],
+["D-019","D 撕名牌·跟拍","1-未知艺术家","","DJI_20261005191454_0223_D.MP4","19:14:54","19:50:13",2116.6,2119,"1920x1080",8.6,"","撕名牌/1-未知艺术家/DJI_20261005191454_0223_D.MP4"],
+["D-020","D 撕名牌·跟拍","6-乔治","★","DJI_20261005191504_0041_D.MP4","19:15:04","19:56:10",2463,2466,"1920x1080",9.95,"","撕名牌/6-乔治/DJI_20261005191504_0041_D.MP4"],
+["D-021","D 撕名牌·跟拍","2-火鸡面","★","DJI_20261005191515_0004_D.MP4","19:15:15","20:06:41",3083.6,3086,"1920x1080",11.72,"","撕名牌/2-火鸡面/DJI_20261005191515_0004_D.MP4"],
+["D-022","D 撕名牌·跟拍","10-陈","","DJI_20261005191522_0485_D.MP4","19:15:22","20:06:50",3085.4,3088,"1920x1080",12.26,"","撕名牌/10-陈/DJI_20261005191522_0485_D.MP4"],
+["D-023","D 撕名牌·跟拍","3-破车北伐","★","DJI_20261005192132_0009_D.MP4","19:21:32","20:13:06",3091.5,3094,"1920x1080",11.82,"缺开局7分钟","撕名牌/3-破车北伐/DJI_20261005192132_0009_D.MP4"],
+["D-024","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005192137_0128_D.MP4","19:21:37","19:21:54",15.5,17,"1920x1080",0.1,"","撕名牌/固定机位+大镜头/1/DJI_20261005192137_0128_D.MP4"],
+["D-025","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005192302_0129_D.MP4","19:23:02","19:23:15",11.1,13,"1920x1080",0.07,"","撕名牌/固定机位+大镜头/1/DJI_20261005192302_0129_D.MP4"],
+["D-026","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005192351_0130_D.MP4","19:23:51","19:24:00",7.9,9,"1920x1080",0.05,"","撕名牌/固定机位+大镜头/1/DJI_20261005192351_0130_D.MP4"],
+["D-027","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005192431_0131_D.MP4","19:24:31","19:24:36",3.4,5,"1920x1080",0.02,"","撕名牌/固定机位+大镜头/1/DJI_20261005192431_0131_D.MP4"],
+["D-028","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005192531_0132_D.MP4","19:25:31","19:25:41",9,10,"1920x1080",0.06,"","撕名牌/固定机位+大镜头/1/DJI_20261005192531_0132_D.MP4"],
+["D-029","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005192602_0133_D.MP4","19:26:02","19:26:12",9,10,"1920x1080",0.06,"","撕名牌/固定机位+大镜头/1/DJI_20261005192602_0133_D.MP4"],
+["D-030","D 撕名牌·跟拍","5-糍粑","","CAM_20261005192633_0002_D.MP4","19:26:33","20:06:30",2393.7,2397,"3840x2160",17.2,"缺开局12分钟；拾音最丰富","撕名牌/5-糍粑/CAM_20261005192633_0002_D.MP4"],
+["D-031","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005192639_0134_D.MP4","19:26:39","19:27:00",19.8,21,"1920x1080",0.13,"","撕名牌/固定机位+大镜头/1/DJI_20261005192639_0134_D.MP4"],
+["D-032","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005192753_0135_D.MP4","19:27:53","19:27:57",3.6,4,"1920x1080",0.02,"","撕名牌/固定机位+大镜头/1/DJI_20261005192753_0135_D.MP4"],
+["D-033","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005192816_0136_D.MP4","19:28:16","19:28:23",5.6,7,"1920x1080",0.04,"","撕名牌/固定机位+大镜头/1/DJI_20261005192816_0136_D.MP4"],
+["D-034","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005192827_0137_D.MP4","19:28:27","19:28:37",9.1,10,"1920x1080",0.06,"","撕名牌/固定机位+大镜头/1/DJI_20261005192827_0137_D.MP4"],
+["D-035","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005192935_0138_D.MP4","19:29:35","19:29:56",19.8,21,"1920x1080",0.12,"","撕名牌/固定机位+大镜头/1/DJI_20261005192935_0138_D.MP4"],
+["D-036","D 撕名牌·跟拍","7-吃不起火鸡面","","DJI_20261005192944_0002_D.MP4","19:29:44","19:30:33",47.4,49,"3840x2160",0.8,"仅0.8分钟（淘汰早，正常）","撕名牌/7-吃不起火鸡面/DJI_20261005192944_0002_D.MP4"],
+["D-037","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005192944_0002_D.MP4","19:29:44","19:30:33",47.4,49,"3840x2160",0.8,"演播厅4K（与D-036同名不同目录）","撕名牌/固定机位+大镜头/演播厅/DJI_20261005192944_0002_D.MP4"],
+["D-038","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005193025_0139_D.MP4","19:30:25","19:30:43",16.8,18,"1920x1080",0.11,"","撕名牌/固定机位+大镜头/1/DJI_20261005193025_0139_D.MP4"],
+["D-039","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005193226_0140_D.MP4","19:32:26","19:32:45",18,19,"1920x1080",0.11,"","撕名牌/固定机位+大镜头/1/DJI_20261005193226_0140_D.MP4"],
+["D-040","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005193335_0141_D.MP4","19:33:35","19:33:46",9.8,11,"1920x1080",0.07,"","撕名牌/固定机位+大镜头/1/DJI_20261005193335_0141_D.MP4"],
+["D-041","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005193345_0003_D.MP4","19:33:45","19:35:04",77.5,79,"3840x2160",1.32,"演播厅4K","撕名牌/固定机位+大镜头/演播厅/DJI_20261005193345_0003_D.MP4"],
+["D-042","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005193414_0142_D.MP4","19:34:14","19:34:49",33.7,35,"1920x1080",0.21,"","撕名牌/固定机位+大镜头/1/DJI_20261005193414_0142_D.MP4"],
+["D-043","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005193516_0143_D.MP4","19:35:16","19:36:02",44.5,46,"1920x1080",0.28,"","撕名牌/固定机位+大镜头/1/DJI_20261005193516_0143_D.MP4"],
+["D-044","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005193609_0144_D.MP4","19:36:09","19:36:21",10.9,12,"1920x1080",0.07,"","撕名牌/固定机位+大镜头/1/DJI_20261005193609_0144_D.MP4"],
+["D-045","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005193627_0145_D.MP4","19:36:27","19:36:36",7.9,9,"1920x1080",0.05,"","撕名牌/固定机位+大镜头/1/DJI_20261005193627_0145_D.MP4"],
+["D-046","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005193635_0004_D.MP4","19:36:35","19:37:29",52.9,54,"3840x2160",0.88,"演播厅4K","撕名牌/固定机位+大镜头/演播厅/DJI_20261005193635_0004_D.MP4"],
+["D-047","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005193736_0146_D.MP4","19:37:36","19:37:42",5.7,6,"1920x1080",0.04,"","撕名牌/固定机位+大镜头/1/DJI_20261005193736_0146_D.MP4"],
+["D-048","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005193820_0147_D.MP4","19:38:20","19:38:47",26.3,27,"1920x1080",0.17,"","撕名牌/固定机位+大镜头/1/DJI_20261005193820_0147_D.MP4"],
+["D-049","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005194119_0148_D.MP4","19:41:19","19:41:35",14.8,16,"1920x1080",0.1,"","撕名牌/固定机位+大镜头/1/DJI_20261005194119_0148_D.MP4"],
+["D-050","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005194213_0149_D.MP4","19:42:13","19:42:54",39.9,41,"1920x1080",0.26,"","撕名牌/固定机位+大镜头/1/DJI_20261005194213_0149_D.MP4"],
+["D-051","D 撕名牌·跟拍","4-靳叫瘦","","CAM_20261005194447_0035_D.MP4","19:44:47","20:06:18",1288.2,1291,"3840x2160",8,"后半程","撕名牌/4-靳叫瘦/CAM_20261005194447_0035_D.MP4"],
+["D-052","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005194451_0150_D.MP4","19:44:51","19:45:03",11.2,12,"1920x1080",0.07,"","撕名牌/固定机位+大镜头/1/DJI_20261005194451_0150_D.MP4"],
+["D-053","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005194512_0151_D.MP4","19:45:12","19:45:28",15.1,16,"1920x1080",0.1,"","撕名牌/固定机位+大镜头/1/DJI_20261005194512_0151_D.MP4"],
+["D-054","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005194644_0152_D.MP4","19:46:44","19:47:35",49.9,51,"1920x1080",0.33,"含惊奇队长出局瞬间","撕名牌/固定机位+大镜头/1/DJI_20261005194644_0152_D.MP4"],
+["D-055","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005194823_0153_D.MP4","19:48:23","19:48:41",17.2,18,"1920x1080",0.11,"","撕名牌/固定机位+大镜头/1/DJI_20261005194823_0153_D.MP4"],
+["D-056","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005194901_0154_D.MP4","19:49:01","19:49:18",15.4,17,"1920x1080",0.1,"","撕名牌/固定机位+大镜头/1/DJI_20261005194901_0154_D.MP4"],
+["D-057","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005194959_0155_D.MP4","19:49:59","19:50:09",8,10,"1920x1080",0.05,"","撕名牌/固定机位+大镜头/1/DJI_20261005194959_0155_D.MP4"],
+["D-058","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005195055_0156_D.MP4","19:50:55","19:51:11",14.7,16,"1920x1080",0.1,"","撕名牌/固定机位+大镜头/1/DJI_20261005195055_0156_D.MP4"],
+["D-059","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005195117_0157_D.MP4","19:51:17","19:51:54",35.2,37,"1920x1080",0.23,"","撕名牌/固定机位+大镜头/1/DJI_20261005195117_0157_D.MP4"],
+["D-060","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005195207_0158_D.MP4","19:52:07","19:52:25",16.9,18,"1920x1080",0.11,"","撕名牌/固定机位+大镜头/1/DJI_20261005195207_0158_D.MP4"],
+["D-061","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005195248_0159_D.MP4","19:52:48","19:52:55",6.2,7,"1920x1080",0.04,"","撕名牌/固定机位+大镜头/1/DJI_20261005195248_0159_D.MP4"],
+["D-062","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005195314_0160_D.MP4","19:53:14","19:53:21",6.1,7,"1920x1080",0.04,"","撕名牌/固定机位+大镜头/1/DJI_20261005195314_0160_D.MP4"],
+["D-063","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005195341_0161_D.MP4","19:53:41","19:54:23",40.4,42,"1920x1080",0.27,"","撕名牌/固定机位+大镜头/1/DJI_20261005195341_0161_D.MP4"],
+["D-064","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005195446_0005_D.MP4","19:54:46","19:55:39",51.5,53,"3840x2160",0.85,"演播厅4K","撕名牌/固定机位+大镜头/演播厅/DJI_20261005195446_0005_D.MP4"],
+["D-065","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005195606_0162_D.MP4","19:56:06","19:56:23",16,17,"1920x1080",0.1,"","撕名牌/固定机位+大镜头/1/DJI_20261005195606_0162_D.MP4"],
+["D-066","D 撕名牌·跟拍","6-乔治","★","DJI_20261005195612_0042_D.MP4","19:56:12","19:57:12",57,60,"1920x1080",0.23,"","撕名牌/6-乔治/DJI_20261005195612_0042_D.MP4"],
+["D-067","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005195735_0163_D.MP4","19:57:35","19:58:04",27.9,29,"1920x1080",0.19,"","撕名牌/固定机位+大镜头/1/DJI_20261005195735_0163_D.MP4"],
+["D-068","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005195856_0164_D.MP4","19:58:56","19:59:10",12.7,14,"1920x1080",0.08,"","撕名牌/固定机位+大镜头/1/DJI_20261005195856_0164_D.MP4"],
+["D-069","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005195939_0165_D.MP4","19:59:39","20:00:12",32.1,33,"1920x1080",0.2,"","撕名牌/固定机位+大镜头/1/DJI_20261005195939_0165_D.MP4"],
+["D-070","D 撕名牌·跟拍","6-乔治","★","DJI_20261005195945_0043_D.MP4","19:59:45","20:01:49",121.1,124,"1920x1080",0.49,"乔治自述白撕了三次","撕名牌/6-乔治/DJI_20261005195945_0043_D.MP4"],
+["D-071","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005200033_0166_D.MP4","20:00:33","20:00:59",24.8,26,"1920x1080",0.16,"","撕名牌/固定机位+大镜头/1/DJI_20261005200033_0166_D.MP4"],
+["D-072","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005200130_0167_D.MP4","20:01:30","20:01:41",10.7,11,"1920x1080",0.07,"","撕名牌/固定机位+大镜头/1/DJI_20261005200130_0167_D.MP4"],
+["D-073","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005200151_0168_D.MP4","20:01:51","20:02:00",8.1,9,"1920x1080",0.05,"","撕名牌/固定机位+大镜头/1/DJI_20261005200151_0168_D.MP4"],
+["D-074","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005200257_0169_D.MP4","20:02:57","20:03:16",18.2,19,"1920x1080",0.12,"","撕名牌/固定机位+大镜头/1/DJI_20261005200257_0169_D.MP4"],
+["D-075","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005200339_0170_D.MP4","20:03:39","20:03:54",14,15,"1920x1080",0.09,"","撕名牌/固定机位+大镜头/1/DJI_20261005200339_0170_D.MP4"],
+["D-076","D 撕名牌·跟拍","6-乔治","★","DJI_20261005200351_0044_D.MP4","20:03:51","20:04:15",20.9,24,"1920x1080",0.08,"","撕名牌/6-乔治/DJI_20261005200351_0044_D.MP4"],
+["D-077","D 撕名牌·跟拍","6-乔治","★","DJI_20261005200554_0045_D.MP4","20:05:54","20:06:10",13.1,16,"1920x1080",0.05,"","撕名牌/6-乔治/DJI_20261005200554_0045_D.MP4"],
+["D-078","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005200603_0172_D.MP4","20:06:03","20:06:35",31.5,32,"1920x1080",0.21,"","撕名牌/固定机位+大镜头/1/DJI_20261005200603_0172_D.MP4"],
+["D-079","D 撕名牌·跟拍","5-糍粑","","CAM_20261005200628_0003_D.MP4","20:06:28","20:07:15",45.7,47,"3840x2160",0.33,"","撕名牌/5-糍粑/CAM_20261005200628_0003_D.MP4"],
+["D-080","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005200734_0173_D.MP4","20:07:34","20:08:12",37.1,38,"1920x1080",0.24,"","撕名牌/固定机位+大镜头/1/DJI_20261005200734_0173_D.MP4"],
+["D-081","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005201017_0174_D.MP4","20:10:17","20:10:39",21.3,22,"1920x1080",0.14,"","撕名牌/固定机位+大镜头/1/DJI_20261005201017_0174_D.MP4"],
+["D-082","D 撕名牌·固定机位","固定机位/大镜头","","DJI_20261005201227_0175_D.MP4","20:12:27","20:12:48",19.6,21,"1920x1080",0.13,"","撕名牌/固定机位+大镜头/1/DJI_20261005201227_0175_D.MP4"],
+["W-001","W 卧底揭晓","卧底揭晓","","宣布卧底胜利1.mp4","","",92.8,0,"1920x1080",0.2,"灭霸点出三位卧底","撕名牌/宣布卧底胜利/宣布卧底胜利1.mp4"],
+["W-002","W 卧底揭晓","卧底揭晓","","宣布卧底胜利2.mp4","","",34.7,0,"1920x1080",0.07,"揭晓后花絮","撕名牌/宣布卧底胜利/宣布卧底胜利2.mp4"],
+["Z-001","Z 片尾","片尾","","片尾.mp4","","",15.5,0,"1920x1080",0.03,"口号「跑路吧兄弟」","片尾.mp4"]
+];
+const EVENTS=[
+[0,"开局：5 分钟只找卡不撕",0],[60,"黑寡妇使用技能（获知复活卡位置）",0],[120,"海王获得「傻子牌」",0],
+[380,"海王发动技能（滋水枪）",0],[470,"闪电侠名牌变大",0],[610,"野生奇异博士入场",0],
+[780,"神奇女侠用呼啦圈淘汰海王 → 海王 OUT",0],[1060,"美国队长撕掉绿巨人一条命",0],
+[1200,"缩圈：灭霸念广播（场地缩小）",0],[1530,"蜘蛛侠用「死亡笔记」失误 → 复活卡",0],
+[1680,"闪电侠「时间减速」，全场禁跑",0],[1740,"技能失效，全员恢复",0],
+[1820,"闪电侠淘汰美国队长",0],[1840,"蝙蝠侠对闪电侠使用技能",0],[1850,"美国队长用复活卡复活",0],
+[1870,"闪电侠 OUT",0],[1890,"闪电侠复活",0],[1940,"超人（★卧底）发动技能",0],
+[1960,"钢铁侠（★卧底）淘汰惊奇队长",1],[1990,"美国队长 OUT",0],
+[2690,"神奇女侠淘汰黑寡妇",0],[2750,"黑寡妇用复活卡复活",0],
+[2820,"闪电侠淘汰超人（★卧底出局）",1],[2940,"黑寡妇 OUT",0],
+[3018,"⚠️ 漏记：闪电侠后段也出局",1]
+];
+const ANCHOR=19*3600+14*60+45;
+function sec(s){if(!s)return null;const p=s.split(":").map(Number);return p[0]*3600+p[1]*60+(p[2]||0);}
+function pad(n){return String(n).padStart(2,"0");}
+function norm(t){t=((t%86400)+86400)%86400;return pad(Math.floor(t/3600))+":"+pad(Math.floor(t%3600/60))+":"+pad(Math.floor(t%60));}
+function HMS(t){return Math.floor(t/60)+":"+pad(t%60);}
+const recs=RAW.map(r=>({id:r[0],cat:r[1],sub:r[2],under:r[3]==="★",name:r[4],st:r[5],end:r[6],dur:r[7],real:r[8],
+ res:r[9],sz:r[10],note:r[11],path:r[12],role:ROLE[r[2]]||"",tl:/延时/.test(r[11]),fx:/固定机位/.test(r[2]),
+ s:sec(r[5]),e:sec(r[6])}));
+const evs=EVENTS.map(E=>{const t=E[0],at=((ANCHOR+t)%86400),hits=[];
+ recs.forEach(r=>{if(r.s==null||r.e==null)return;
+  let a=r.s,b=r.e;if(b<a)b+=86400;let x=at;if(x<a)x+=86400;
+  if(x>=a&&x<=b){const off=x-a;
+   hits.push({id:r.id,role:r.role||r.sub,name:r.name,fx:r.fx,under:r.under,tl:r.tl,
+    pos:r.tl&&r.real>r.dur*3?("第 "+Math.round(off/r.real*7393)+" 帧"):norm(a+off).slice(0,8)});}});
+ hits.sort((p,q)=>p.id.localeCompare(q.id));
+ return {g:HMS(t),abs:norm(at),ev:E[1],under:E[2],hits:hits};});
+/* tabs */
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
+ document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("on",x===t));
+ document.querySelectorAll(".pane").forEach(p=>p.classList.toggle("on",p.id===t.dataset.p));
+ window.scrollTo({top:0,behavior:"smooth"});});
+/* cards */
+const totD=recs.reduce((s,r)=>s+r.dur,0),totS=recs.reduce((s,r)=>s+r.sz,0);
+document.getElementById("cards").innerHTML=[["素材条目",recs.length+" 条"],["总时长",Math.round(totD/60)+" 分钟"],
+ ["总体积",totS.toFixed(1)+" GB"],["跟拍文件",recs.filter(r=>r.role).length+" 个"],
+ ["事件定位",evs.length+" 个"],["卧底素材","7 个"]]
+ .map(([k,v])=>'<div class="card"><b>'+v+'</b><span>'+k+'</span></div>').join("");
+/* timeline */
+const W0=19*3600,W1=20*3600+15*60,SPAN=W1-W0;
+function mkseg(r){let a=r.s,b=r.e;if(b<a)b+=86400;
+ const l=Math.max(0,(a-W0))/SPAN*100, w=Math.min(100,(b-W0)/SPAN*100)-l;
+ return {l:l.toFixed(2),w:Math.max(w,0.25).toFixed(2),t:r.id+" "+r.name+" "+(r.st||"")+"–"+(r.end||"")+(r.tl?" 延时":""),tl:r.tl};}
+const ROLEORDER=["钢铁侠","蝙蝠侠","蜘蛛侠","闪电侠","黑寡妇","超人","绿巨人","神奇女侠","美国队长","海王"];
+const lanes=ROLEORDER.filter(rl=>recs.some(r=>r.role===rl)).map(rl=>
+ ({name:rl,under:recs.some(r=>r.role===rl&&r.under),fx:false,segs:recs.filter(r=>r.role===rl&&r.s!=null).map(mkseg)}));
+lanes.push({name:"固定机位/大镜头",under:false,fx:true,segs:recs.filter(r=>r.fx&&r.s!=null).map(mkseg)});
+document.getElementById("tl").innerHTML=lanes.map(l=>'<div class="tlrow"><div class="tlname'+(l.under?" u":"")+'">'+l.name+(l.under?" ★":"")+'</div>'+
+ '<div class="tlbar">'+l.segs.map(s=>'<div class="seg'+(s.tl?" tl":"")+(l.fx?" fx":"")+(l.under&&!l.fx?" u":"")+'" style="left:'+s.l+'%;width:'+s.w+'%" title="'+s.t+'"></div>').join("")+'</div></div>').join("");
+document.getElementById("ticks").innerHTML=["19:00","19:15","19:30","19:45","20:00","20:15"].map(t=>
+ '<div class="tick" style="left:'+(((sec(t+":00")-W0)/SPAN)*100).toFixed(1)+'%">'+t+'</div>').join("");
+/* list */
+let fcat="全部",frole="全部";
+const cats=["全部"].concat([...new Set(recs.map(r=>r.cat))]);
+const roles=["全部"].concat([...new Set(recs.map(r=>r.role).filter(Boolean))]);
+const mkbtn=(arr,attr,cur)=>arr.map(c=>'<button data-'+attr+'="'+c+'"'+(c===cur?' class="on"':'')+'>'+c+'</button>').join("");
+document.getElementById("catbtns").innerHTML=mkbtn(cats,"c",fcat);
+document.getElementById("rolebtns").innerHTML=mkbtn(roles,"r",frole);
+function bind(){document.querySelectorAll("[data-c]").forEach(b=>b.onclick=()=>{fcat=b.dataset.c;
+  document.querySelectorAll("[data-c]").forEach(x=>x.classList.toggle("on",x.dataset.c===fcat));draw();});
+ document.querySelectorAll("[data-r]").forEach(b=>b.onclick=()=>{frole=b.dataset.r;
+  document.querySelectorAll("[data-r]").forEach(x=>x.classList.toggle("on",x.dataset.r===frole));draw();});}
+bind();
+document.getElementById("q").oninput=draw;
+window.addEventListener("resize",draw);
+function draw(){
+ const q=document.getElementById("q").value.trim().toLowerCase();
+ const rows=recs.filter(r=>(fcat==="全部"||r.cat===fcat)&&(frole==="全部"||r.role===frole)
+  &&(!q||(r.id+r.sub+r.name+r.path+r.note+(r.role||"")).toLowerCase().includes(q)));
+ document.getElementById("cnt").textContent="显示 "+rows.length+" / "+recs.length+" 条";
+ const isM=window.innerWidth<=760;
+ document.getElementById("tblwrap").style.display=isM?"none":"block";
+ document.getElementById("mcards").style.display=isM?"block":"none";
+ if(isM){
+  document.getElementById("mcards").innerHTML=rows.map(r=>
+   '<div class="mcard"><div class="r1"><span class="id">'+r.id+'</span><span>'+
+   '<span class="tag">'+r.cat.replace(/^\S+\s/,"")+'</span> '+
+   (r.under?'<span class="tag u">卧底</span> ':"")+(r.tl?'<span class="tag tl">延时</span>':"")+'</span></div>'+
+   '<div style="'+(r.under?"color:var(--u);font-weight:700":"")+'">'+(r.role?r.role+"（"+r.sub+"）":r.sub)+'</div>'+
+   '<div class="nm">'+r.name+'</div>'+
+   '<div class="kv"><span>时间</span><span>'+(r.st||"—")+' → "+(r.end||"—")+'</span>'+
+   '<span>覆盖</span><span>'+(r.real/60).toFixed(1)+" 分钟（片长 "+r.dur.toFixed(1)+' 秒）</span>'+
+   '<span>体积</span><span>'+r.sz.toFixed(2)+" GB · "+r.res+'</span>'+
+   (r.note?'<span>备注</span><span>'+r.note+'</span>':"")+'</div></div>').join("");
+ } else {
+  document.getElementById("tb").innerHTML=rows.map(r=>'<tr><td class="id">'+r.id+'</td><td>'+r.cat+'</td>'+
+   '<td class="'+(r.under?"u":"")+'">'+(r.role?r.role+"（"+r.sub+"）":r.sub)+(r.under?" ★":"")+'</td>'+
+   '<td>'+r.name+'</td><td>'+(r.st||"—")+'</td><td>'+(r.end||"—")+'</td>'+
+   '<td>'+(r.real/60).toFixed(1)+'</td><td>'+r.dur.toFixed(1)+'</td><td>'+r.sz.toFixed(2)+'</td>'+
+   '<td>'+(r.tl?'<span class="tag tl">延时</span> ':"")+(r.under?'<span class="tag u">卧底</span> ':"")+r.note+'</td>'+
+   '<td class="p">'+r.path+'</td></tr>').join("");
+ }}
+draw();
+/* events */
+document.getElementById("evs").innerHTML=evs.map((e,i)=>
+ '<div class="ev" id="ev'+i+'"><div class="evh" onclick="document.getElementById(\'ev'+i+'\').classList.toggle(\'open\')">'+
+ '<span class="t">'+e.g+'</span><span class="a">'+e.abs+'</span>'+
+ '<span class="c">'+(e.under?"★ ":"")+e.ev+'</span><span class="cnt">'+e.hits.length+' 条 ▾</span></div>'+
+ '<div class="evb">'+(e.hits.length
+  ? '<div class="tscroll"><table><thead><tr><th>编号</th><th>角色/机位</th><th>文件名</th><th>文件内时间点</th></tr></thead><tbody>'+
+    e.hits.map(h=>'<tr><td class="id">'+h.id+'</td><td class="'+(h.under?"u":"")+'">'+(h.fx?"固定机位":h.role)+(h.under?" ★":"")+
+    '</td><td>'+h.name+'</td><td class="id">'+h.pos+(h.tl?' <span class="tag tl">延时</span>':"")+'</td></tr>').join("")+
+    '</tbody></table></div>'
+  : '<p class="hint">该时刻没有任何素材覆盖。</p>')+'</div></div>').join("");
+</script>
+</body>
+</html>
