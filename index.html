@@ -462,7 +462,7 @@ function draw(){
    (r.under?'<span class="tag u">卧底</span> ':"")+(r.tl?'<span class="tag tl">延时</span>':"")+'</span></div>'+
    '<div style="'+(r.under?"color:var(--u);font-weight:700":"")+'">'+(r.role?r.role+"（"+r.sub+"）":r.sub)+'</div>'+
    '<div class="nm">'+r.name+'</div>'+
-   '<div class="kv"><span>时间</span><span>'+(r.st||"—")+' → "+(r.end||"—")+'</span>'+
+   '<div class="kv"><span>时间</span><span>'+(r.st||"—")+' → '+(r.end||"—")+'</span>'+
    '<span>覆盖</span><span>'+(r.real/60).toFixed(1)+" 分钟（片长 "+r.dur.toFixed(1)+' 秒）</span>'+
    '<span>体积</span><span>'+r.sz.toFixed(2)+" GB · "+r.res+'</span>'+
    (r.note?'<span>备注</span><span>'+r.note+'</span>':"")+'</div></div>').join("");
